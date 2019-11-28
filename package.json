@@ -1,0 +1,26 @@
+{
+  "name": "angie_site",
+  "version": "0.0.0",
+  "description": "fashion website",
+  "main": "app.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixmariotto/Angie_Site.git"
+  },
+  "author": "felix mariotto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixmariotto/Angie_Site/issues"
+  },
+  "homepage": "https://github.com/felixmariotto/Angie_Site#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
