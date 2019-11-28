@@ -46,36 +46,82 @@ body {
 	top: 0px;
 	left: 0px;
 	height: 70px;
-	width: calc( 100vw - 40px );
-	padding: 0px 20px 0px 20px;
+	width: 100vw;
 	background-color: black;
-	display: flex;
-	justify-content: flex-end;
 }
 
-	#logo {
-		position: fixed;
-		height: 50px;
-		margin: 10px;
+	#nav-links {
+		position: relative;
+		width: calc( 100% - 40px );
+		padding: 0px 20px 0px 20px;
+		top: 50%;
+		transform: translateY( -50% );
+		display: flex;
+		justify-content: flex-end;
 	}
 
-	.nav-link-container {
-		margin: 0px 20px 0px 20px;
+	@media screen and ( max-width: 450px ) {
+
+		#nav-links {
+			position: fixed;
+			width: auto;
+			padding: 0px 20px 0px 20px;
+			top: 70px;
+			right: 0px;
+			transform: none;
+			flex-direction: column;
+			justify-content: flex-end;
+			background-color: rgba( 0, 0, 0, 0.8 );
+			animation: hide_menu 0.5s infinite ;
+		}
+
+		.nav-link-container {
+			height: 70px;
+		}
+
 	}
 
-		.nav-link-container > a {
-			display: inline-block;
-			position: relative;
-			color: white;
-			text-decoration: inherit;
-			font-size: 2.1em;
-			top: 50%;
-			transform: translateY( -50% );
+	@keyframes show_menu {
+		0% {
+			transform: translateX( 100% );
+		}
+		100% {
+			transform: translateX( 0% );
+		}
+	}
+
+	@keyframes hide_menu {
+		0% {
+			transform: translateX( 0% );
+		}
+		100% {
+			transform: translateX( 100% );
+		}
+	}
+
+		#logo {
+			position: fixed;
+			height: 50px;
+			margin: 10px;
 		}
 
-		.nav-link-container > a:hover {
-			color: grey;
+		.nav-link-container {
+			margin: 0px 20px 0px 20px;
 		}
+
+			.nav-link-container > a {
+				display: inline-block;
+				position: relative;
+				color: white;
+				text-decoration: inherit;
+				font-size: 2.1em;
+				top: 50%;
+				transform: translateY( -50% );
+			}
+
+			.nav-link-container > a:hover {
+				color: grey;
+			}
 
 
 
