@@ -27,6 +27,7 @@ p {
 
 
 body {
+	background-color: pink;
 	background: linear-gradient(0.95turn, #ff8282, #fae0ff);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
