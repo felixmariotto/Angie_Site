@@ -1,5 +1,8 @@
 
 
+<div id="mask"></div>
+
+
 <nav id="navbar">
 	
 	<div id="nav-links">
@@ -24,3 +27,96 @@
 <a href="/">
 	<img id="logo" src="assets/logo.png">
 </a>
+
+
+<img id="menu-icon" src="assets/menu_icon.png" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+	const domNavbar = document.getElementById( 'navbar' );
+	const domMenu = document.getElementById( 'nav-links' );
+	const domMenuIcon = document.getElementById( 'menu-icon' );
+	const domMask = document.getElementById( 'mask' );
+
+	var isMenuVisible = false ;
+
+
+
+	domMenuIcon.addEventListener( 'click', ()=> {
+		
+		if ( isMenuVisible ) {
+
+			hideMenu();
+
+		} else {
+
+			showMenu();
+
+		};
+
+	});
+
+
+
+	domMask.addEventListener( 'click', ()=> {
+		
+		if ( isMenuVisible ) {
+
+			hideMenu();
+
+		};
+
+	});
+
+
+
+	domNavbar.addEventListener( 'click', ()=> {
+
+		if ( isMenuVisible ) {
+
+			hideMenu();
+
+		};
+
+	});
+
+
+	function showMenu() {
+
+		isMenuVisible = true ;
+
+		domMask.style.display = "block" ;
+
+		domMenu.classList.remove( 'hide-menu' );
+		domMenu.classList.add( 'show-menu' );
+
+	};
+
+
+	function hideMenu() {
+
+		isMenuVisible = false ;
+
+		domMask.style.display = "none" ;
+
+		domMenu.classList.remove( 'show-menu' );
+		domMenu.classList.add( 'hide-menu' );
+
+	};
+
+
+</script>
