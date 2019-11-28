@@ -5,6 +5,39 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="./views/style.css">
+
+	<style type="text/css">
+
+		#trend-container {
+			position: relative;
+			width: 1024px;
+			max-width: 90vw;
+			top: 5vw;
+			left: 50%;
+			margin-bottom: 5vw;
+			transform: translate( -50% );
+			text-align: center;
+			background-color: white;
+		}
+		
+			#trend {
+				position: relative;
+				width: 100%;
+			}
+
+			#cartel {
+				width: calc( 100% - 40px );
+				font-size: 1.5em;
+				padding: 50px 20px 50px 20px;
+				background-color: white;
+			}
+
+				#cartel > p {
+					font-size: 0.85em;
+				}
+
+	</style>
+
 </head>
 
 
@@ -12,6 +45,31 @@
 <body>
 
 	<% include ./partials/nav.ejs %>
+
+	<div id="page-container">
+
+		<div id="trend-container">
+			
+			<img id="trend" src="assets/trend.jpg">
+
+			<div id="cartel">
+				
+				<h2>Plastic Dream</h2>
+				<h4>SS - 2021</h4>
+
+				<br>
+
+				<p>
+					Comments... comments... comments
+						<br>
+					Comments... comments... comments
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
 
 </body>
 </html>
