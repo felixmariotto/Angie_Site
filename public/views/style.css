@@ -1,4 +1,67 @@
 
-body {
-	background-color: pink;
+
+@font-face {
+	font-family: custom;
+	src: url( '../assets/Metalia.ttf' );
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: custom;
+}
+
+
+
+
+
+body {
+	background: linear-gradient(0.95turn, #ffffff, #ffd9d9);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+#navbar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 80px;
+	width: calc( 100vw - 40px );
+	padding: 0px 20px 0px 20px;
+	background-color: black;
+	display: flex;
+	justify-content: flex-end;
+}
+
+	#logo {
+		position: fixed;
+		height: 50px;
+		margin: 15px;
+	}
+
+	.nav-link-container {
+		margin: 0px 20px 0px 20px;
+	}
+
+		.nav-link-container > a {
+			display: inline-block;
+			position: relative;
+			color: white;
+			text-decoration: inherit;
+			font-size: 2.1em;
+			top: 50%;
+			transform: translateY( -50% );
+		}
+
+		.nav-link-container > a:hover {
+			color: grey;
+		}
