@@ -27,7 +27,8 @@ p {
 
 
 body {
-	background: linear-gradient(0.95turn, #ff8282, #fae0ff);
+	background: linear-gradient( 0.95turn, #e6e6e6, #ffffff );
+	background: -webkit-linear-gradient( 0.95turn, #e6e6e6, #ffffff );
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -70,9 +71,9 @@ body {
 
 	#menu-icon {
 		position: fixed;
-		height: 50px;
-		top: 10px;
-		right: 10px;
+		height: 40px;
+		top: 15px;
+		right: 15px;
 		display: none;
 	}
 
