@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 5000;
 
 
 app.use(express.static('public'));
@@ -67,6 +67,26 @@ app
     	
         res.render( 'index', { trendTag, trendName, season } );
 
+    })
+
+
+    .get('/trends2', (req, res)=> {
+        res.render( 'wip' );
+    })
+
+
+    .get('/blog', (req, res)=> {
+        res.render( 'wip' );
+    })
+
+
+    .get('/contact', (req, res)=> {
+        res.render( 'wip' );
+    })
+
+
+    .get('/home', (req, res)=> {
+        res.render( 'wip' );
     })
 
 
