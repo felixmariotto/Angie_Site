@@ -27,8 +27,12 @@ p {
 
 
 body {
-	background: linear-gradient( 0.95turn, #e6e6e6, #ffffff );
+	background: -webkit-gradient(linear, center top, center bottom, from(#917c4d), to(#ffffff));
 	background: -webkit-linear-gradient( 0.95turn, #e6e6e6, #ffffff );
+	background: -moz-linear-gradient( 0.95turn, #e6e6e6, #ffffff );
+	background: -o-linear-gradient( 0.95turn, #e6e6e6, #ffffff );
+	background: -ms-linear-gradient( 0.95turn, #e6e6e6, #ffffff );
+	background: linear-gradient( 0.95turn, #e6e6e6, #ffffff );
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
