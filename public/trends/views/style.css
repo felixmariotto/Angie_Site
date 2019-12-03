@@ -135,8 +135,9 @@ body {
 
 		#logo {
 			position: fixed;
-			height: 50px;
-			margin: 10px;
+			height: 100px;
+			margin-top: -15px;
+			margin-left: 10px;
 		}
 
 		.nav-link-container {

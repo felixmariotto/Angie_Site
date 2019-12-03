@@ -13,10 +13,62 @@ app.set('view engine', 'ejs');
 
 
 
+
+
 app
-    .get('/', (req, res)=> {
-        res.render('index');
+
+    .get('/trends/:trendTag', (req, res)=> {
+
+    	var trendTag = req.params.trendTag ;
+
+    	switch ( trendTag ) {
+
+    		case 'alcap' :
+    			var trendName = 'Al Capone';
+    			var season = 'Autumn - Winter 2021';
+    			break;
+
+    		case 'drip' :
+    			var trendName = 'Dripping Beauty';
+    			var season = 'Spring - Summer 2021';
+    			break;
+
+    		case 'gentl' :
+    			var trendName = 'Gentle Breeze';
+    			var season = 'Spring - Summer 2021';
+    			break;
+
+    		case 'greendev' :
+    			var trendName = 'Green Devotion';
+    			var season = 'Autumn - Winter 2021';
+    			break;
+
+    		case 'lmntree' :
+    			var trendName = 'Lemon Tree';
+    			var season = 'Autumn - Winter 2020';
+    			break;
+
+    		case 'pastel' :
+    			var trendName = 'Pastel Syrup';
+    			var season = 'Spring - Summer 2021';
+    			break;
+
+    		case 'seren' :
+    			var trendName = 'Serenity';
+    			var season = 'Spring - Summer 2021';
+    			break;
+
+    		case 'strtmorph' :
+    			var trendName = 'Street Morphing';
+    			var season = 'Autumn - Winter 2021';
+    			break;
+
+    	};
+    	
+        res.render( 'index', { trendTag, trendName, season } );
+
     })
+
 
     .listen(PORT, ()=> {
         console.log('App listening on port ' + PORT);
